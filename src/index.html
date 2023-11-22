@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>21-NTU-CS-1307</title>
+</head>
+<body>
+   <!-- 
+    DESCRIPTION: This is the main page of the website to find largest number
+    AUTHUR: Fasih Ahmad Khan
+    DATE:22/09/2020
+ -->
+ <script>
+    function largest(form){
+        let num1=form.num1.value
+        let num2=form.num2.value
+        let max
+        if(num1>num2){
+            max=num1
+        }
+        else{
+            max=num2
+        }
+        document.write("The largest number is "+max)
+    }
+ </script>
+</body>
+</html>
