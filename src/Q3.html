@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>21-NTU-CS-1307</title>
+</head>
+
+<body>
+    <!-- 
+    DESCRIPTION: This is the main page of the website to find even and odd number
+    AUTHUR: Fasih Ahmad Khan
+    DATE:22/09/2020
+ -->
+    <h1 class="text-center text-6xl font-bold mb-4">EVEN AND ODD</h1>
+    <hr class="border-4 border-gray-600">
+    <form class="m-auto w-96 px-24 py-10" id="form">
+        <input required  class="border-2 border-black p-2 " type="text" placeholder="Enter Starting Value: " id="S_value"
+            name="S_value"><br>
+        <input required  class="border-2 border-black p-2" type="text" placeholder="Enter Ending Value: " id="E_value"
+            name="E_value"><br>
+       
+        <input onclick="EvenOdd(this.form)" value="Submit" type="button"
+            class="mt-8  bg-blue-400 p-4 rounded-sm hover:bg-blue-500 w-48">
+        <button type="reset" class="mt-4 bg-gray-200 p-4 rounded-sm hover:bg-gray-300 w-48">Clear</button>
+    </form>
+
+    <h2 id="even" class="ml-52 pl-52">Even Numbers are:</h2>
+    <h2 id="odd"  class="ml-52 pl-52">Odd Numbers are:</h2>
+    <script>
+        function EvenOdd(form) {
+            document.querySelector("#even").innerHTML = "Even Numbers are: ";
+            document.querySelector("#odd").innerHTML = "Odd Numbers are: " ;
+
+            let num1 = form.S_value.value;
+            let num2 = form.E_value.value;
+            let even = [];
+            let odd = [];
+    
+
+            for (let i = num1; i <= num2; i++) {
+                if (i % 2 == 0) {
+                    even.push(i);
+                } else {
+                    odd.push(i);
+                } 
+            }
+            document.querySelector("#even").innerHTML = "Even Numbers are: " + even;
+            document.querySelector("#odd").innerHTML = "Odd Numbers are: " + odd;
+
+        }
+    </script>
+</body>
+
+</html>

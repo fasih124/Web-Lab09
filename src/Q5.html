@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>21-NTU-CS-1307</title>
+    <script>
+        function generateRandomNumber() {
+            var min = parseInt(document.getElementById("min").value);
+            var max = parseInt(document.getElementById("max").value);
+
+            var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            document.getElementById("result").innerHTML = "Random Number: " + randomNumber;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 
+    DESCRIPTION: This is the main page of the website to find prime number
+    AUTHUR: Fasih Ahmad Khan
+    DATE:22/09/2020
+ -->
+ <h1 class="text-center text-6xl font-bold mb-4">Prime Number</h1>
+ <hr class="border-4 border-gray-600">
+    <h1 class="text-center mb-5">Random Number Generator</h1>
+    <form class=" text-center">
+        <input type="number" placeholder="Staring value:" class="border-blue-600 p-2 rounded-lg border-2" id="min" name="min" required><br><br>
+        <input type="number"  placeholder="Ending value:" class="border-blue-600 p-2 rounded-lg border-2" id="max" name="max" required><br><br>
+        <input onclick="generateRandomNumber()" value="Generate Random Number" type="button"
+        class="  bg-green-500 p-3 rounded-lg hover:bg-green-600 px-6">
+        <br>
+    <button type="reset" class=" bg-red-500 py-3 px-24 rounded-lg mt-8 hover:bg-red-600 ">Reset</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>

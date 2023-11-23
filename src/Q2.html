@@ -12,16 +12,21 @@
     AUTHUR: Fasih Ahmad Khan
     DATE:22/09/2020
  -->
-<form class="m-auto w-96 px-24 py-32" id="form"  >
-<label for="num1">Enter Number 1: </label> 
-<input class="border-2 border-black p-2 " type="text" placeholder="Enter only Numeric Value" id="num1" name="num1"><br>
-<label for="num2">Enter Number 2: </label> 
-<input class="border-2 border-black p-2" type="text" placeholder="Enter only Numeric Value" id="num2" name="num2"><br>
-<label for="num3">Enter Number 3: </label> 
-<input class="border-2 border-black p-2" type="text" placeholder="Enter only Numeric Value" id="num3" name="num3"><br>
-<input onclick="Smallest(this.form)" value="Find!!!" type="button" class="mt-8  bg-green-400 p-4 rounded-sm hover:bg-green-600 w-28">
-</form>
+ <h1 class="text-center text-6xl font-bold mb-4">Find the Smallest Number</h1>
+<hr class="border-4 border-gray-600">
+<div class="flex justify-around grow-0 ">
 
+    <form class="m-auto w-96 px-24 py-10" id="form"  >
+        <label for="num1">Enter Number 1: </label> 
+        <input class="border-2 border-black p-2 " type="text" placeholder="Enter only Numeric Value" id="num1" name="num1"><br>
+        <label for="num2">Enter Number 2: </label> 
+        <input class="border-2 border-black p-2" type="text" placeholder="Enter only Numeric Value" id="num2" name="num2"><br>
+        <label for="num3">Enter Number 3: </label> 
+        <input class="border-2 border-black p-2" type="text" placeholder="Enter only Numeric Value" id="num3" name="num3"><br>
+        <input onclick="Smallest(this.form)" value="Find!!!" type="button" class="mt-8  bg-green-400 p-4 rounded-sm hover:bg-green-600 w-28">
+    </form>
+    <img class="w-1/3" src="./js.png" alt="">
+</div>
  <script>
     function Smallest(form){
         let num1=form.num1.value;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>21-NTU-CS-1307</title>
+</head>
+
+<body>
+    <!-- 
+    DESCRIPTION: This is the main page of the website to find prime number
+    AUTHUR: Fasih Ahmad Khan
+    DATE:22/09/2020
+ -->
+    <h1 class="text-center text-6xl font-bold mb-4">Prime Number</h1>
+    <hr class="border-4 border-gray-600">
+    <form class="m-auto w-96 px-24 py-10" id="form">
+        <input required class="border-2 border-black p-2 " type="text" placeholder="Enter Starting Value: "
+            id="PrimeNumber" name="PrimeNumber"><br>
+
+        <div class="flex gap-2 mt-4">
+            <input onclick="isPrimeNumber(this.form)" value="Check prime Number" type="button"
+                class="  bg-green-500 p-2 rounded-sm hover:bg-green-600 px-6">
+            <button type="reset" class=" bg-red-500 p-2  rounded-sm hover:bg-red-600 ">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        function isPrimeNumber(form) {
+            let num = form.PrimeNumber.value;
+    
+            if (num < 2) {
+               alert("Number is not prime");
+                return;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    alert("Number is not prime");
+                    return;
+                }
+            }
+
+            alert("Number is prime");
+        }
+    </script>
+</body>
+
+</html>
