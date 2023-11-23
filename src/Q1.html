@@ -12,14 +12,14 @@
     AUTHUR: Fasih Ahmad Khan
     DATE:22/09/2020
  -->
-<form class="m-auto w-96 px-24 py-32" id="form" method="post" >
+<form class="m-auto w-96 px-24 py-32" id="form"  >
 <label for="num1">Enter Number 1: </label> 
 <input class="border-2 border-black p-2 " type="text" id="num1" name="num1"><br>
 <label for="num2">Enter Number 2: </label> 
 <input class="border-2 border-black p-2" type="text" id="num2" name="num2"><br>
 <label for="num3">Enter Number 3: </label> 
 <input class="border-2 border-black p-2" type="text" id="num3" name="num3"><br>
-<button onclick="largest(this.form)" type="submit" class="mt-8  bg-green-400 p-4 rounded-sm hover:bg-green-600 w-28">Find!!!</button>
+<input onclick="largest(this.form)" value="Find!!!" type="button" class="mt-8  bg-green-400 p-4 rounded-sm hover:bg-green-600 w-28">
 </form>
 <h2 id="result">Largest Number is:</h2>
 
@@ -46,9 +46,8 @@
             }
         }
         document.querySelector("#result").innerHTML="Largest Number is: "+max;
-       document.querySelector(form).addEventListener("submit",function(e){
-           e.preventDefault();
-       })
+       
+
     }
  </script>
 </body>
